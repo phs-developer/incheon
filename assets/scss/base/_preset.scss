@@ -1,0 +1,28 @@
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    margin: -1px;
+}
+#header .inner,
+#footer .inner {
+    width: 1190px;
+    margin: 0 auto;
+}
+#container {
+    .group-search .inner {
+        width: 1190px;
+        margin: 0 auto;
+    }
+    .inner {
+        width: 1172px;
+        margin: 0 auto;
+    }
+}
+
+.headline {
+    font-size: 1.5em;
+    font-weight: bold;
+}

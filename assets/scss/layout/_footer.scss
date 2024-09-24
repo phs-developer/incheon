@@ -1,0 +1,164 @@
+#footer {
+    background-color: #393c41;
+    padding: 2.25rem 0;
+    width: 100%;
+    min-width: 1190px;
+    .sc-relate {
+        .relate-list {
+            position: relative;
+            display: flex;
+            gap: 0.25rem 1rem;
+        }
+        .relate-item {
+            flex: 1;
+            .on {
+                &::after {
+                    border-bottom-color: transparent;
+                    border-top-color: #fff;
+                    margin-top: 14px;
+                }
+            }
+        }
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            color: #fff;
+            line-height: 44px;
+            padding: 0 20px;
+            background-color: #2c3131;
+            border-radius: 0.25rem;
+            &::after {
+                content: "";
+                width: 7px;
+                border: 7px solid rgba(0, 0, 0, 0);
+                border-bottom-color: #fff;
+            }
+        }
+        .sub-wrap {
+            display: none;
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            width: 100%;
+        }
+        .sub {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            background: #fff;
+            transition: transform 0.3s linear;
+            .sub-title {
+                display: block;
+                color: #336;
+                font-size: 22px;
+                line-height: 24px;
+                padding: 10px 0 15px;
+                border-bottom: 2px solid #336;
+                font-weight: 600;
+            }
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 10px;
+            }
+            li {
+                width: calc(100% / 5);
+                a {
+                    display: block;
+                    font-size: 14px;
+                    line-height: 16px;
+                    padding: 5px 0;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .group-info {
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            padding: 1.5rem 0 0 0;
+            .detail-area {
+                .corp-list {
+                    display: flex;
+                    gap: 1.25rem;
+                }
+                .corp-item {
+                    position: relative;
+                    a {
+                        padding: 0.25rem 0;
+                        border: 2px solid rgba(0, 0, 0, 0);
+                        color: #fff;
+                        strong {
+                            color: #f7b02a;
+                        }
+                    }
+                    & + .corp-item::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: -0.625rem;
+                        width: 1px;
+                        height: 0.625rem;
+                        border-radius: 50%;
+                        background-color: #777;
+                    }
+                }
+            }
+            .mark-area {
+                display: flex;
+                gap: 1.25rem;
+                .link-flag {
+                    display: block;
+                    width: 124px;
+                    height: 40px;
+                    background-image: url("../images/footer-logo-koreansymbol.png");
+                }
+                .link-webaccessibility {
+                    display: block;
+                    width: 68px;
+                    height: 41px;
+                    background-image: url("../images/footer-logo-webaccess.png");
+                }
+            }
+        }
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            padding: 1.25rem 0 0 0;
+            .detail-area {
+                .addr {
+                    color: #fff;
+                    font-size: 1rem;
+                    font-weight: 300;
+                    letter-spacing: -0.05em;
+                }
+                .copy {
+                    display: block;
+                    margin-top: 1rem;
+                    color: #fff;
+                    font-weight: 300;
+                    letter-spacing: 0;
+                    opacity: 0.5;
+                }
+            }
+            .mark-area {
+                .link-cs {
+                    display: block;
+                    width: 245px;
+                    height: 46px;
+                    background-image: url("../images/footer-logo-michugol.png");
+                }
+            }
+        }
+    }
+}

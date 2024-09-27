@@ -99,13 +99,17 @@
         width: 4rem;
         height: 4rem;
         z-index: 2;
+        @include mobile() {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
     }
     .btn-prev {
-        left: -2rem;
+        left: -1.7rem;
         background: url("../images/slider-arrow-left.png") no-repeat center / cover;
     }
     .btn-next {
-        right: -2rem;
+        right: -1.7rem;
         background: url("../images/slider-arrow-right.png") no-repeat center / cover;
     }
 }

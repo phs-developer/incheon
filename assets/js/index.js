@@ -39,13 +39,22 @@ $(function () {
         },
         pagination: {
             el: ".sc-cityzen .swiper .pagination",
+            clickable: true,
         },
+        slidesPerView: "1",
         spaceBetween: 16,
-        slidesPerView: "4",
         autoplay: {
             delay: 3500,
         },
         speed: 1000,
+        breakpoints: {
+            1280: {
+                slidesPerView: "4",
+            },
+            767: {
+                slidesPerView: "3",
+            },
+        },
     });
 
     // ------ eventHandler ------
@@ -95,8 +104,12 @@ $(function () {
         const viewHeight = $(window).innerHeight();
         const scrollTop = $(document).scrollTop();
 
-        scrollTop > viewHeight / 2 && $(".group-gnb").addClass("active");
-        scrollTop < 95 && $(".group-gnb").removeClass("active");
+        if ($(window).width() >= 1024) {
+            scrollTop > viewHeight / 2 && $(".group-gnb").addClass("active");
+            scrollTop < 95 && $(".group-gnb").removeClass("active");
+        } else {
+            $(".group-gnb").removeClass("active");
+        }
     });
 
     // sc-event

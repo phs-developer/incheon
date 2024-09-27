@@ -21,6 +21,9 @@
                 width: 180px;
                 height: 40px;
                 background: url("../images/logo-incheon.png") no-repeat center/contain;
+                @include tablet() {
+                    height: 30px;
+                }
             }
         }
         .gnb-area {
@@ -43,9 +46,6 @@
                             text-align: center;
                             font-weight: 600;
                             white-space: nowrap;
-                            // &.on + .sub {
-                            //     display: block;
-                            // }
                         }
                         &:first-child {
                             .title-wrap::before {
@@ -181,6 +181,9 @@
                     background-image: url("../images/header-gnb-search.png");
                 }
             }
+            @include tablet() {
+                display: none;
+            }
         }
         &.active {
             position: fixed;
@@ -191,8 +194,14 @@
                 display: block;
             }
         }
+        @include tablet() {
+            height: 60px;
+            > .inner {
+                height: 100%;
+                justify-content: center;
+            }
+        }
     }
-
     .group-global {
         position: absolute;
         top: 0;
@@ -205,12 +214,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @include tablet() {
+                padding: 0;
+            }
         }
         .global-area {
             .global-list {
                 display: flex;
                 justify-content: center;
-                align-items: center;
                 border-left: 1px solid #ddd;
                 border-right: 1px solid #ddd;
                 .global-item {
@@ -224,6 +235,16 @@
                         border-left: 1px solid #ddd;
                     }
                 }
+                @include tablet() {
+                    justify-content: space-between;
+                    .global-item {
+                        flex: 1;
+                        text-align: center;
+                    }
+                }
+            }
+            @include tablet() {
+                width: 100%;
             }
         }
         .util-area {
@@ -269,9 +290,11 @@
                     }
                 }
             }
+            @include tablet() {
+                display: none;
+            }
         }
     }
-
     .group-search {
         .inner {
             display: flex;
@@ -280,6 +303,9 @@
             gap: 1rem;
             height: 160px;
             padding: 1rem 0;
+            @include desktop() {
+                padding: 0 3vw;
+            }
         }
         .logo-area {
             display: block;
@@ -385,5 +411,15 @@
                 }
             }
         }
+        @include tablet() {
+            display: none;
+        }
+    }
+    @include desktop() {
+        min-width: auto;
+    }
+    @include tablet() {
+        position: inherit;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     }
 }

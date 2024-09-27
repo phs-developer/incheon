@@ -10,6 +10,10 @@
 #footer .inner {
     width: 1190px;
     margin: 0 auto;
+    @include desktop() {
+        width: 100%;
+        padding: 0 3vw;
+    }
 }
 #container {
     .group-search .inner {
@@ -19,6 +23,10 @@
     .inner {
         width: 1172px;
         margin: 0 auto;
+        @include desktop() {
+            width: auto;
+            margin: 0 3vw;
+        }
     }
 }
 

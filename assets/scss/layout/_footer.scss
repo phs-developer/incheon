@@ -8,6 +8,12 @@
             position: relative;
             display: flex;
             gap: 0.25rem 1rem;
+            @include desktop() {
+                flex-wrap: wrap;
+            }
+            @include mobile() {
+                flex-direction: column;
+            }
         }
         .relate-item {
             flex: 1;
@@ -17,6 +23,13 @@
                     border-top-color: #fff;
                     margin-top: 14px;
                 }
+            }
+            @include desktop() {
+                flex: 0 0 auto;
+                width: calc(50% - 0.5rem);
+            }
+            @include mobile() {
+                width: 100%;
             }
         }
         .title {
@@ -74,6 +87,12 @@
                         text-decoration: underline;
                     }
                 }
+                @include mobile() {
+                    width: 50%;
+                    a {
+                        font-size: 0.8rem;
+                    }
+                }
             }
         }
     }
@@ -88,6 +107,11 @@
                 .corp-list {
                     display: flex;
                     gap: 1.25rem;
+                    @include mobile() {
+                        row-gap: 0;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
                 }
                 .corp-item {
                     position: relative;
@@ -128,6 +152,9 @@
                     background-image: url("../images/footer-logo-webaccess.png");
                 }
             }
+            @include desktop() {
+                flex-direction: column;
+            }
         }
         .bottom {
             display: flex;
@@ -136,15 +163,16 @@
             gap: 2rem;
             padding: 1.25rem 0 0 0;
             .detail-area {
+                text-align: center;
                 .addr {
                     color: #fff;
-                    font-size: 1rem;
+                    font-size: 1em;
                     font-weight: 300;
                     letter-spacing: -0.05em;
                 }
                 .copy {
                     display: block;
-                    margin-top: 1rem;
+                    margin-top: 1em;
                     color: #fff;
                     font-weight: 300;
                     letter-spacing: 0;
@@ -159,6 +187,13 @@
                     background-image: url("../images/footer-logo-michugol.png");
                 }
             }
+            @include desktop() {
+                flex-direction: column;
+                gap: 0;
+            }
         }
+    }
+    @include desktop() {
+        min-width: auto;
     }
 }
